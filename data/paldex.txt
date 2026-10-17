@@ -1,0 +1,299 @@
+1 | Lamball | Neutral
+2 | Cattiva | Neutral
+3 | Chikipi | Neutral
+4 | Lifmunk | Grass
+5 | Fuack | Water
+5B | Fuack Ignis | Water, Fire
+6 | Vixy | Neutral
+7 | Celaray | Water
+7B | Celaray Lux | Water, Electric
+8 | Cremis | Neutral
+9 | Croajiro | Water
+9B | Croajiro Noct | Water, Dark
+10 | Herbil | Grass, Neutral
+11 | Teafant | Water
+12 | Gumoss | Grass, Ground
+12B | Gumoss Flower | Grass, Ground
+13 | Pupperai | Ground
+14 | Clovee | Grass, Neutral
+15 | Jolthog | Electric
+15B | Jolthog Cryst | Ice
+16 | Depresso | Dark
+17 | Pengullet | Water, Ice
+17B | Pengullet Lux | Water, Electric
+18 | Penking | Water, Ice
+18B | Penking Lux | Water, Electric
+19 | Hoocrates | Dark
+20 | Melpaca | Neutral
+21 | Kingpaca | Neutral
+21B | Kingpaca Cryst | Ice
+22 | Daedream | Dark
+23 | Tanzee | Grass
+23B | Tanzee Ignis | Fire
+24 | Nox | Dark
+25 | Flambelle | Fire
+26 | Rooby | Fire
+27 | Mau | Dark
+27B | Mau Cryst | Ice
+28 | Rushoar | Ground
+29 | Foxparks | Fire
+29B | Foxparks Cryst | Ice
+30 | Killamari | Dark, Water
+30B | Killamari Primo | Neutral, Water
+31 | Fuddler | Ground
+32 | Eikthyrdeer | Neutral
+32B | Eikthyrdeer Terra | Ground
+33 | Direhowl | Neutral
+34 | Caprity | Grass
+34B | Caprity Noct | Dark
+35 | Swee | Ice
+36 | Sweepa | Ice
+37 | Turtacle | Water
+37B | Turtacle Terra | Water, Ground
+38 | Hangyu | Ground
+38B | Hangyu Cryst | Ice
+39 | Woolipop | Neutral
+39B | Woolipop Terra | Ground
+40 | Mozzarina | Neutral
+41 | Azurobe | Water, Dragon
+41B | Azurobe Cryst | Ice, Dragon
+42 | Sparkit | Electric
+43 | Kelpsea | Water
+43B | Kelpsea Ignis | Fire
+44 | Ribbuny | Neutral
+44B | Ribbuny Botan | Grass
+45 | Jelliette | Water
+46 | Jellroy | Water, Dark
+47 | Amione | Water
+48 | Gloopie | Water, Dark
+48B | Gloopie Primo | Water, Neutral
+49 | Galeclaw | Neutral
+50 | Wispaw | Dark
+51 | Nitewing | Neutral
+52 | Tombat | Dark
+53 | Tocotoco | Neutral
+54 | Univolt | Electric
+54B | Univolt Cryst | Ice
+55 | Gobfin | Water
+55B | Gobfin Ignis | Fire
+56 | Loupmoon | Dark
+56B | Loupmoon Cryst | Ice
+57 | Cawgnito | Dark
+58 | Arsox | Fire
+59 | Muffly | Ice
+60 | Bristla | Grass
+61 | Cinnamoth | Grass
+62 | Puffolt | Electric
+63 | Elphidran | Dragon
+63B | Elphidran Aqua | Dragon, Water
+64 | Vanwyrm | Fire, Dark
+64B | Vanwyrm Cryst | Ice, Dark
+65 | Felbat | Dark
+66 | Vaelet | Grass
+67 | Beegarde | Grass
+68 | Elizabee | Grass
+69 | Lovander | Dark
+70 | Grintale | Neutral
+71 | Tarantriss | Dark
+72 | Polapup | Ice, Water
+72B | Polapup Terra | Ice, Ground
+73 | Leezpunk | Dark
+73B | Leezpunk Ignis | Fire
+74 | Gorirat | Neutral
+74B | Gorirat Terra | Ground
+75 | Surfent | Water
+75B | Surfent Terra | Ground
+76 | Robinquill | Grass
+76B | Robinquill Terra | Grass, Ground
+77 | Flopie | Grass
+78 | Wixen | Fire
+78B | Wixen Noct | Fire, Dark
+79 | Katress | Dark
+79B | Katress Ignis | Dark, Fire
+80 | Helzephyr | Dark
+80B | Helzephyr Lux | Dark, Electric
+81 | Elgrove | Grass
+81B | Elgrove Cryst | Ice
+82 | Lunaris | Neutral
+83 | Fenglope | Neutral
+83B | Fenglope Lux | Electric
+84 | Dinossom | Grass, Dragon
+84B | Dinossom Lux | Electric, Dragon
+85 | Bushi | Fire
+85B | Bushi Noct | Fire, Dark
+86 | Munchill | Ice, Water
+87 | Mammorest | Grass, Ground
+87B | Mammorest Cryst | Ice, Ground
+88 | Finsider | Water
+88B | Finsider Ignis | Water, Fire
+89 | Petallia | Grass
+89B | Petallia Ignis | Grass, Fire
+90 | Leafan | Grass
+91 | Incineram | Fire, Dark
+91B | Incineram Noct | Dark
+92 | Dazzi | Electric
+92B | Dazzi Noct | Dark, Electric
+93 | Pyrin | Fire
+93B | Pyrin Noct | Fire, Dark
+94 | Relaxaurus | Dragon, Water
+94B | Relaxaurus Lux | Dragon, Electric
+95 | Foxcicle | Ice
+96 | Beakon | Electric
+96B | Beakon Cryst | Ice
+97 | Ghangler | Dark, Water
+97B | Ghangler Ignis | Fire, Water
+98 | Rayhound | Electric
+98B | Rayhound Cryst | Ice
+99 | Menasting | Dark, Ground
+99B | Menasting Terra | Ground
+100 | Needoll | Grass
+100B | Needoll Noct | Dark, Grass
+101 | Reindrix | Ice
+102 | Mossanda | Grass
+102B | Mossanda Lux | Electric
+103 | Chillet | Ice, Dragon
+103B | Chillet Ignis | Fire, Dragon
+104 | Ragnahawk | Fire
+105 | Moldron | Fire, Ground
+105B | Moldron Cryst | Ice, Ground
+106 | Palumba | Grass
+107 | Digtoise | Ground
+108 | Broncherry | Grass
+108B | Broncherry Aqua | Grass, Water
+109 | Dumud | Ground, Water
+109B | Dumud Gild | Ground, Water
+110 | Braloha | Grass, Ground
+111 | Kitsun | Fire
+111B | Kitsun Noct | Dark
+112 | Blazehowl | Fire
+112B | Blazehowl Noct | Fire, Dark
+113 | Warsect | Ground, Grass
+113B | Warsect Terra | Ground
+114 | Frostplume | Ice
+115 | Majex | Dark, Fire
+116 | Sibelyx | Ice
+116B | Sibelyx Primo | Neutral
+117 | Maraith | Dark
+118 | Shroomer | Grass
+118B | Shroomer Noct | Grass, Dark
+119 | Icelyn | Ice
+120 | Gildra | Dark, Ground
+121 | Jormuntide | Dragon, Water
+121B | Jormuntide Ignis | Dragon, Fire
+122 | Suzaku | Fire
+122B | Suzaku Aqua | Water
+123 | Dazemu | Ground
+124 | Quivern | Dragon
+124B | Quivern Botan | Dragon, Grass
+125 | Lullu | Grass
+126 | Kikit | Ground
+127 | Yakumo | Neutral
+128 | Skutlass | Water
+128B | Skutlass Ignis | Water, Fire
+129 | Reptyro | Fire, Ground
+129B | Reptyro Cryst | Ice, Ground
+130 | Starryon | Dark
+130B | Starryon Primo | Neutral
+131 | Pierdon | Ground
+131B | Pierdon Cryst | Ice
+132 | Cryolinx | Ice
+132B | Cryolinx Terra | Ground
+133 | Snugloo | Ice
+134 | Wumpo | Ice
+134B | Wumpo Botan | Grass
+135 | Sootseer | Dark, Fire
+136 | Carnibora | Grass
+137 | Blazamut | Fire
+137B | Blazamut Ryu | Dragon, Fire
+138 | Dualith | Ground, Grass
+138B | Dualith Noct | Ground, Dark
+139 | Anubis | Ground
+140 | Sekhmet | Ground
+141 | Prixter | Dark, Ground
+141B | Prixter Lux | Electric, Ground
+142 | Tetroise | Ground
+142B | Tetroise Primo | Neutral
+143 | Nyafia | Dark
+144 | Mimog | Neutral
+145 | Xenovader | Dark
+146 | Xenogard | Dragon
+147 | Prunelia | Grass, Dark
+148 | Nitemary | Dark
+148B | Nitemary Botan | Grass
+149 | Smokie | Dark
+149B | Smokie Cryst | Dark, Ice
+150 | Omascul | Dark
+151 | Whalaska | Ice, Water
+151B | Whalaska Ignis | Ice, Fire
+152 | Verdash | Grass
+153 | Splatterina | Dark
+154 | Gildane | Ground
+155 | Dogen | Neutral
+156 | Bulldosu | Ground
+157 | Celesdir | Neutral
+157B | Celesdir Noct | Dark
+158 | Astegon | Dragon, Dark
+159 | Knocklem | Ground
+159B | Knocklem Ignis | Fire
+160 | Silvegis | Dragon
+161 | Azurmane | Electric
+162 | Valentail | Neutral
+163 | Snock | Electric
+163B | Snock Lux | Electric, Ground
+164 | Souffline | Grass
+165 | Lapiron | Ground
+166 | Hoodle | Dark
+167 | Slowatt | Electric
+168 | Bakemi | Dark
+169 | Solmora | Water
+169B | Solmora Lux | Water, Electric
+170 | Lapure | Neutral
+171 | Eidrolon | Dragon, Dark
+171B | Eidrolon Ignis | Dragon, Fire
+172 | Dynamoff | Electric
+173 | Tropicaw | Grass
+174 | Flaracle | Fire
+175 | Ophydia | Grass, Water
+176 | Dupin | Fire
+177 | Roujay | Dark
+178 | Venusa | Dark
+179 | Mycora | Grass
+180 | Loomen | Dark, Fire
+181 | Wistella | Dark
+182 | Solenne | Dark, Neutral
+183 | Renjishi | Fire
+184 | Aegidron | Dragon, Ground
+185 | Grizzbolt | Electric
+186 | Lyleen | Grass
+186B | Lyleen Noct | Dark
+187 | Orserk | Dragon, Electric
+188 | Faleris | Fire
+188B | Faleris Aqua | Water
+189 | Shadowbeak | Dark
+190 | Selyne | Dark, Neutral
+191 | Bastigor | Ice
+192 | Shaolong | Dragon, Water
+193 | Silvance | Grass
+194 | Dandilord | Grass, Dark
+195 | Bellanoir | Dark
+195B | Bellanoir Libero | Dark
+196 | Xenolord | Dark, Dragon
+197 | Hartalis | Neutral
+198 | Paladius | Neutral
+199 | Necromus | Dark
+200 | Frostallion | Ice
+200B | Frostallion Noct | Dark
+201 | Neptilius | Water
+202 | Jetragon | Dragon
+203 | Panthalus | Water
+T1 | Green Slime | Grass
+T2 | Blue Slime | Water
+T3 | Red Slime | Fire
+T4 | Purple Slime | Dark
+T5 | Illuminant Slime | Neutral
+T6 | Rainbow Slime | Neutral
+T7 | Enchanted Sword | Neutral
+T8 | Cave Bat | Neutral
+T9 | Illuminant Bat | Neutral
+T10 | Eye of Cthulhu | Dark
+T11 | Demon Eye | Dark

@@ -1,0 +1,36 @@
+<section class="hero">
+  <h1>Palworld Breeding Calculator</h1>
+  <p class="lead">Updated for v1.0. Pick two parents to see their child, or pick the Pal you want and see every pair that breeds it. All 299 Pals and 44,850 combinations.</p>
+</section>
+
+<div class="tabs" role="tablist">
+  <button class="tab active" role="tab" id="tab-pair" aria-controls="panel-pair" aria-selected="true" type="button">Parents → Child</button>
+  <button class="tab" role="tab" id="tab-child" aria-controls="panel-child" aria-selected="false" type="button">Child → Parents</button>
+</div>
+
+<section class="card panel" id="panel-pair" role="tabpanel" aria-labelledby="tab-pair">
+  <div class="pairform">
+    <div class="picker" data-picker="a"><label for="pick-a">Parent 1</label><input id="pick-a" type="text" autocomplete="off" placeholder="Type a Pal name…" aria-autocomplete="list" aria-expanded="false"><button class="clear" type="button" aria-label="Clear">×</button><ul class="suggest" role="listbox" hidden></ul></div>
+    <button class="icon-btn swap" id="swap" type="button" aria-label="Swap parents" title="Swap">⇄</button>
+    <div class="picker" data-picker="b"><label for="pick-b">Parent 2</label><input id="pick-b" type="text" autocomplete="off" placeholder="Type a Pal name…" aria-autocomplete="list" aria-expanded="false"><button class="clear" type="button" aria-label="Clear">×</button><ul class="suggest" role="listbox" hidden></ul></div>
+  </div>
+  <div id="pair-result" class="result" aria-live="polite"></div>
+  <p class="muted small">Gender does not matter, except Katress + Wixen where the mother decides the child. Results reflect v1.0 game data.</p>
+</section>
+
+<section class="card panel" id="panel-child" role="tabpanel" aria-labelledby="tab-child" hidden>
+  <div class="pairform">
+    <div class="picker" data-picker="c"><label for="pick-c">Pal you want</label><input id="pick-c" type="text" autocomplete="off" placeholder="Type a Pal name…" aria-autocomplete="list" aria-expanded="false"><button class="clear" type="button" aria-label="Clear">×</button><ul class="suggest" role="listbox" hidden></ul></div>
+    <div class="picker" data-picker="f"><label for="pick-f">Must include this parent <span class="muted">(optional)</span></label><input id="pick-f" type="text" autocomplete="off" placeholder="Any parent" aria-autocomplete="list" aria-expanded="false"><button class="clear" type="button" aria-label="Clear">×</button><ul class="suggest" role="listbox" hidden></ul></div>
+  </div>
+  <div id="child-result" class="result" aria-live="polite"></div>
+</section>
+
+<section class="howto">
+  <h2>How breeding works in Palworld</h2>
+  <div class="grid3">
+    <div class="card"><h3>1. One male, one female</h3><p>Put a male and a female Pal in a Breeding Farm with a Cake. Which one is which gender does not change the child, except for Katress and Wixen.</p></div>
+    <div class="card"><h3>2. The child is fixed</h3><p>Every pair always produces the same species. Use the calculator above to check before you spend a Cake.</p></div>
+    <div class="card"><h3>3. Passives are inherited</h3><p>The child rolls its passive skills from both parents. See the <a href="/passive-skills/">passive skills list</a> to pick what to breed for.</p></div>
+  </div>
+</section>

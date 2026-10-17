@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{title}}</title>
+<meta name="description" content="{{desc}}">
+<link rel="canonical" href="{{canonical}}">
+<meta property="og:title" content="{{title}}">
+<meta property="og:description" content="{{desc}}">
+<meta property="og:url" content="{{canonical}}">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#0f1115" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f6f7fb" media="(prefers-color-scheme: light)">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+<link rel="stylesheet" href="/style.css">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={{adsense}}" crossorigin="anonymous"></script>
+{{extra_head}}
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="/"><span class="brand-egg" aria-hidden="true"></span>Pal Breeder</a>
+  <nav class="topnav">
+    <a href="/">Calculator</a>
+    <a href="/pals/">Pals</a>
+    <a href="/passive-skills/">Passives</a>
+  </nav>
+  <button id="theme-toggle" class="icon-btn" type="button" aria-label="Toggle dark or light theme" title="Toggle theme">◐</button>
+</header>
+<main class="wrap">
+{{body}}
+</main>
+<footer class="footer">
+  <p>Breeding data for Palworld v1.0 (July 2026). Palworld is a trademark of Pocketpair, Inc. This is an unofficial fan site and is not affiliated with Pocketpair.</p>
+  <p><a href="/about/">About &amp; data sources</a> · <a href="/privacy/">Privacy</a> · <a href="/pals/">All Pals</a> · <a href="/passive-skills/">Passive skills</a></p>
+</footer>
+<script src="/app.js" defer></script>
+</body>
+</html>

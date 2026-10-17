@@ -1,0 +1,331 @@
+{
+ "Astralym": {
+  "name": "Astralym",
+  "num": "204",
+  "skill": "-",
+  "effect": "This Pal's abilities are still being investigated.",
+  "els": []
+ },
+ "Jelliette": {
+  "name": "Jelliette",
+  "num": "45",
+  "skill": "Jelliette Drop",
+  "effect": "While in party, increases items obtained from fishing by (55~95)% . While Jelliette and Jellroy are in your base, Jelliette 's watering speed increases by (50~120)% . (Does not stack)",
+  "els": []
+ },
+ "Jellroy": {
+  "name": "Jellroy",
+  "num": "46",
+  "skill": "Jellroy Drop",
+  "effect": "While in party, increases items obtained from salvaging by (55~95)% . While Jelliette and Jellroy are in your base, Jellroy 's watering speed increases by (50~120)% . (Does not stack)",
+  "els": []
+ },
+ "Knocklem_Ignis": {
+  "name": "Knocklem_Ignis",
+  "num": "159B",
+  "skill": "Iron Guardian Mode",
+  "effect": "When activated, a steel resolve increases Knocklem Ignis 's Attack by (60~210)% and Defense by (60~210)% for a limited time.",
+  "els": []
+ },
+ "Lapiron": {
+  "name": "Lapiron",
+  "num": "165",
+  "skill": "Friend of Earth",
+  "effect": "While in party, increases the player's Defense by (50~65)% while sprinting. (Does not stack)",
+  "els": []
+ },
+ "Lapure": {
+  "name": "Lapure",
+  "num": "170",
+  "skill": "Long-Sleeved Hurray",
+  "effect": "While in party, reduces the Partner Skill cooldowns for other party Pals by (10~50)% . (Does not stack)",
+  "els": []
+ },
+ "Leafan": {
+  "name": "Leafan",
+  "num": "90",
+  "skill": "Selfless Discipline",
+  "effect": "This Pal's Attack and Defense increase by (2~6)% for each other Grass Pal in your party.",
+  "els": []
+ },
+ "Panthalus": {
+  "name": "Panthalus",
+  "num": "203",
+  "skill": "Resonant Guardian",
+  "effect": "Can be ridden as a flying mount. Only 1 can be summoned to a base. While at a base, it constantly patrols the skies and bombards intruders from high above.",
+  "els": []
+ },
+ "Petallia_Ignis": {
+  "name": "Petallia_Ignis",
+  "num": "89B",
+  "skill": "Passion of the Flower Spirit",
+  "effect": "When activated, soothing blossoms restore the player's Health by (80~90)% . While in party, player and party Pals take (15~30)% less Grass damage, and are immune to Ivy-Covered . (Does not stack)",
+  "els": []
+ },
+ "Pierdon": {
+  "name": "Pierdon",
+  "num": "131",
+  "skill": "Power Stone",
+  "effect": "While in party, increases player's and Pals' damage to enemies afflicted with Muddy by (50~65)% . (Does not stack)",
+  "els": []
+ },
+ "Pierdon_Cryst": {
+  "name": "Pierdon_Cryst",
+  "num": "131B",
+  "skill": "Power Crystal",
+  "effect": "While in party, player and party Pals take (15~30)% less Dragon damage. (Does not stack)",
+  "els": []
+ },
+ "Polapup": {
+  "name": "Polapup",
+  "num": "72",
+  "skill": "Rider of the Snowy Mountain",
+  "effect": "Can be ridden. Movement Speed is increased by (80~160)% while mounted on snow . Can also slide quickly down slopes. Technology 26",
+  "els": []
+ },
+ "Polapup_Terra": {
+  "name": "Polapup_Terra",
+  "num": "72B",
+  "skill": "Snowy Mountain Slider",
+  "effect": "Can be ridden. Movement Speed is increased by (80~160)% while mounted on snow . Can also slide quickly down slopes. While it starts out slow, the top speed it can hit while sliding is no joke. Technology 55",
+  "els": []
+ },
+ "Prixter_Lux": {
+  "name": "Prixter_Lux",
+  "num": "141B",
+  "skill": "Scorpion Longwave",
+  "effect": "When activated, Prixter Lux changes the player's attack type to Electric and increases Attack by (30~50)% .",
+  "els": []
+ },
+ "Puffolt": {
+  "name": "Puffolt",
+  "num": "62",
+  "skill": "Crackle Booster",
+  "effect": "While at a base, increases the Generating Electricity",
+  "els": []
+ },
+ "Rayhound_Cryst": {
+  "name": "Rayhound_Cryst",
+  "num": "98B",
+  "skill": "Snow Shepherd",
+  "effect": "Can be ridden. Can perform a double jump while mounted. While in party, increases Defense of Ice Pals by (15~30)% . (Does not stack) Technology 32",
+  "els": []
+ },
+ "Renjishi": {
+  "name": "Renjishi",
+  "num": "183",
+  "skill": "Stage Combat",
+  "effect": "While in party, the player's attacks increase Burn buildup by (2~6) . (Does not stack)",
+  "els": []
+ },
+ "Ribbuny": {
+  "name": "Ribbuny",
+  "num": "44",
+  "skill": "Happy-Go-Lucky Bunny",
+  "effect": "While in party, increases Attack of Neutral Pals by (15~30)% . (Does not stack) While at a base, increases the Handiwork",
+  "els": []
+ },
+ "Ribbuny_Botan": {
+  "name": "Ribbuny_Botan",
+  "num": "44B",
+  "skill": "Ground 'n' Pound",
+  "effect": "While in party, increases damage dealt by Player and Pals' Grass attacks when hitting the enemy's elemental weakness by (25~40)% . (Does not stack) Increases Ribbuny Botan 's efficiency by (200~400)% when working at a Weapon Workbench, Weapon Assembly Line, or other related facilities.",
+  "els": []
+ },
+ "Roujay": {
+  "name": "Roujay",
+  "num": "177",
+  "skill": "Dark-Nester",
+  "effect": "Can be ridden as a flying mount. While in party, increases player's and Pals' damage to enemies afflicted with Blind by (50~65)% . (Does not stack) Technology 72",
+  "els": []
+ },
+ "Sekhmet": {
+  "name": "Sekhmet",
+  "num": "140",
+  "skill": "Desert Empress",
+  "effect": "While at a base, boosts Anubis 's work speed by (20~40)% . Increases efficiency by (30~60)% if Sekhmet is working at a Workbench, Workshop, or other related facilities. (Does not stack)",
+  "els": []
+ },
+ "Skutlass": {
+  "name": "Skutlass",
+  "num": "128",
+  "skill": "Fish Fillet",
+  "effect": "When activated, Skutlass becomes the player's katana (Attack: (2600~3900) ). If it does not revert to its normal form quickly, Skutlass will become incapacitated. It will also become incapacitated if Iaigiri is used.",
+  "els": []
+ },
+ "Skutlass_Ignis": {
+  "name": "Skutlass_Ignis",
+  "num": "128B",
+  "skill": "Seared Fish Fillet",
+  "effect": "When activated, Skutlass Ignis becomes the player's katana (Attack: (2900~4200) ). If it does not revert to its normal form quickly, Skutlass Ignis will become incapacitated. It will also become incapacitated if Iaigiri is used.",
+  "els": []
+ },
+ "Slowatt": {
+  "name": "Slowatt",
+  "num": "167",
+  "skill": "Chillswitch",
+  "effect": "While in party, when the player attacks an enemy afflicted with Electrify , the enemy discharges electricity , dealing damage equal to (40~60)% of the player's attack damage to nearby enemies. (Does not stack.)",
+  "els": []
+ },
+ "Smokie_Cryst": {
+  "name": "Smokie_Cryst",
+  "num": "149B",
+  "skill": "Cryo Instincts",
+  "effect": "While at a base, increases the Cooling",
+  "els": []
+ },
+ "Snock": {
+  "name": "Snock",
+  "num": "163",
+  "skill": "Charging Shell",
+  "effect": "While in party, the player's attacks increase Electrify buildup by (2~6) . (Does not stack)",
+  "els": []
+ },
+ "Snock_Lux": {
+  "name": "Snock_Lux",
+  "num": "163B",
+  "skill": "Grounding Shell",
+  "effect": "While in party, player and party Pals take (15~30)% less Water damage, and are immune to Soak . (Does not stack)",
+  "els": []
+ },
+ "Snock_Terra": {
+  "name": "Snock_Terra",
+  "num": "163B",
+  "skill": "Grounding Shell",
+  "effect": "While in party, player and party Pals take (15~30)% less Water damage, and are immune to Soak . (Does not stack)",
+  "els": []
+ },
+ "Snugloo": {
+  "name": "Snugloo",
+  "num": "133",
+  "skill": "Invisible Eye",
+  "effect": "While in party, reduces the chance of being detected by enemies. (Does not stack)",
+  "els": []
+ },
+ "Solenne": {
+  "name": "Solenne",
+  "num": "182",
+  "skill": "Untainted Maiden",
+  "effect": "While in party, increases the player's Attack by (30~80)% if all Pals in party are different species. (Does not stack)",
+  "els": []
+ },
+ "Solmora": {
+  "name": "Solmora",
+  "num": "169",
+  "skill": "Charming Fish",
+  "effect": "Can be ridden to travel on water. While in party, makes it easier to fish up talented Pals . (Does not stack) Technology 65",
+  "els": []
+ },
+ "Solmora_Lux": {
+  "name": "Solmora_Lux",
+  "num": "169B",
+  "skill": "Shocking Fish",
+  "effect": "Can be ridden to travel on water. While mounted, changes the player's attack type to Electric and increases Attack by (5~20)% . While in party, makes it easier to fish up talented Pals . (Does not stack) Technology 66",
+  "els": []
+ },
+ "Souffline": {
+  "name": "Souffline",
+  "num": "164",
+  "skill": "Fuzzy Fairy",
+  "effect": "While in party, increases the capture rate of Pals afflicted with Ivy-Covered . (Does not stack)",
+  "els": []
+ },
+ "Sparkit": {
+  "name": "Sparkit",
+  "num": "42",
+  "skill": "Static Electricity",
+  "effect": "While in party, increases Attack of Electric Pals by (15~30)% . (Does not stack) Sometimes drops Electric Organ when assigned to Ranch .",
+  "els": []
+ },
+ "Starryon": {
+  "name": "Starryon",
+  "num": "130",
+  "skill": "Night Dancer",
+  "effect": "Can be ridden. Boosts Jump Power while mounted. This Pal's movement speed increases by +(50~100)% at night. Technology 57",
+  "els": []
+ },
+ "Starryon_Primo": {
+  "name": "Starryon_Primo",
+  "num": "130B",
+  "skill": "Light Dancer",
+  "effect": "Can be ridden. Boosts Jump Power while mounted. This Pal's Movement Speed increases by (5~25)% for each other Neutral Pal in your party. (Excluding Starryon Primo ) Technology 77",
+  "els": []
+ },
+ "Tetroise": {
+  "name": "Tetroise",
+  "num": "142",
+  "skill": "Masonry Archelon",
+  "effect": "Can be ridden While at a base, increases the Mining",
+  "els": []
+ },
+ "Tetroise_Primo": {
+  "name": "Tetroise_Primo",
+  "num": "142B",
+  "skill": "Stone-Chaser Archelon",
+  "effect": "Can be ridden. While in party, reduces durability loss of all weapons and armor by (80~100)% . (Does not stack) Technology 75",
+  "els": []
+ },
+ "Tropicaw": {
+  "name": "Tropicaw",
+  "num": "173",
+  "skill": "Flower Dance",
+  "effect": "While in party, extends the invincibility period during dodge rolls and dodge steps by (15~30)% . (Does not stack)",
+  "els": []
+ },
+ "Univolt_Cryst": {
+  "name": "Univolt_Cryst",
+  "num": "54B",
+  "skill": "Frigid Deity",
+  "effect": "Can be ridden. While mounted, changes the player's attack type to Ice and increases Attack by (5~20)% . Technology 64",
+  "els": []
+ },
+ "Valentail": {
+  "name": "Valentail",
+  "num": "162",
+  "skill": "Big Stretch",
+  "effect": "While in party, reduces the effects of gravity on the player, making them more floaty while jumping and falling. (Does not stack)",
+  "els": []
+ },
+ "Venusa": {
+  "name": "Venusa",
+  "num": "178",
+  "skill": "Snake's Sagacity",
+  "effect": "While in party, the player's attacks increase Blind buildup by (2~6) . (Does not stack)",
+  "els": []
+ },
+ "Whalaska": {
+  "name": "Whalaska",
+  "num": "151",
+  "skill": "Chilled Whale Cruiser",
+  "effect": "Can be ridden. While in party, fishing minigames start with the capture gauge increased by (5~14)% . Additionally, while the bars overlap, capture progress increases by (5~14)% . (Does not stack) Technology 42",
+  "els": []
+ },
+ "Whalaska_Ignis": {
+  "name": "Whalaska_Ignis",
+  "num": "151B",
+  "skill": "Cozy Whale Cruiser",
+  "effect": "Can be ridden. While in party, fishing minigame begins with the capture gauge (7~17)% higher than usual, and capture progress increases by (7~17)% while the bars overlap. (Does not stack) Technology 71",
+  "els": []
+ },
+ "Wispaw": {
+  "name": "Wispaw",
+  "num": "50",
+  "skill": "Death-Cheating Feline",
+  "effect": "While in party, increases the capture rate when awarded a back bonus . (Does not stack)",
+  "els": []
+ },
+ "Wistella": {
+  "name": "Wistella",
+  "num": "181",
+  "skill": "Hidden Dark Energy",
+  "effect": "While in party, increases Defense of Dark Pals by (15~30)% . (Does not stack)",
+  "els": []
+ },
+ "Woolipop_Terra": {
+  "name": "Woolipop_Terra",
+  "num": "39B",
+  "skill": "Bitter Pop",
+  "effect": "Sometimes drops Caramel Cotton Candy when assigned to Ranch . While at a base, reduces Hunger depletion rate of Base Pals by (-15~-25)% . (Does not stack)",
+  "els": []
+ }
+}
