@@ -1,6 +1,6 @@
 # Pal Breeder: Palworld breeding calculator
 
-Static, dependency-free Palworld breeding calculator for game version 1.0. Live at the Vercel URL in the repo description.
+Static, dependency-free Palworld breeding calculator for game version 1.0. Live at https://palworld-breeding-nu.vercel.app/
 
 - Parents → child lookup and child → parents reverse lookup, both URL-addressable (`/?a=lamball&b=cattiva`, `/?child=anubis&with=penking`).
 - A page per Pal (`/pal/<slug>/`) with Paldeck number, elements, partner skill, every parent pair that produces it, and what it breeds with every other Pal.

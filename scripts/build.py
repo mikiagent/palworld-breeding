@@ -3,7 +3,7 @@
 import csv, json, re, os, shutil, html, collections, datetime
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA = os.path.join(ROOT, 'data'); TPL = os.path.join(ROOT, 'templates'); OUT = os.path.join(ROOT, 'site')
-SITE_URL = os.environ.get('SITE_URL', 'https://palworld-breeding.vercel.app')
+SITE_URL = os.environ.get('SITE_URL', 'https://palworld-breeding-nu.vercel.app')
 ADSENSE = 'ca-pub-6122961547647042'
 TODAY = datetime.date.today().isoformat()
 
