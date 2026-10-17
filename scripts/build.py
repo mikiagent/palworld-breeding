@@ -64,6 +64,41 @@ for i in range(N):
 # ---------- passives ----------
 passives = list(csv.DictReader(open(os.path.join(DATA, 'passive-skills.csv'), encoding='utf-8-sig')))
 
+# ---------- fastest breeding route from early-game Pals ----------
+def basenum(p):
+    return int(p['num'].rstrip('B')) if not p['crossover'] else 999
+STARTERS = [i for i, p in enumerate(pals) if not p['crossover'] and not p['num'].endswith('B') and basenum(p) <= 40]
+first_pair = {}   # child -> (a, b)
+INF = 10**9
+cost = [INF] * N
+for i in STARTERS: cost[i] = 0
+changed = True
+while changed:
+    changed = False
+    known = [i for i in range(N) if cost[i] < INF]
+    known.sort(key=lambda i: cost[i])
+    for x in known:
+        for y in known:
+            if y < x: continue
+            c = child[x][y]
+            if c < 0: continue
+            nc = cost[x] + cost[y] + 1
+            if nc < cost[c]:
+                cost[c] = nc; first_pair[c] = (x, y); changed = True
+owned = set(i for i in range(N) if cost[i] < INF)
+def route(i):
+    steps = []; seen = set()
+    def rec(t):
+        if t in STARTERS or t in seen or t not in first_pair: return
+        seen.add(t); a, b = first_pair[t]; rec(a); rec(b); steps.append((a, b, t))
+    rec(i); return steps
+print('reachable from starters:', len(owned), 'of', N)
+
+# popular Pals for static pair pages
+POPULAR = [p['slug'] for p in pals if not p['crossover'] and not p['num'].endswith('B') and basenum(p) <= 40] + \
+    ['anubis', 'jetragon', 'frostallion', 'paladius', 'necromus', 'shadowbeak', 'jormuntide', 'orserk', 'lyleen', 'grizzbolt', 'faleris', 'suzaku', 'astegon', 'blazamut', 'bellanoir', 'selyne', 'xenolord', 'xenogard', 'bastigor', 'dandilord', 'hartalis', 'neptilius', 'panthalus', 'shaolong', 'silvance', 'aegidron', 'celesdir', 'knocklem', 'sekhmet', 'whalaska', 'starryon', 'chillet', 'vanwyrm', 'nitewing', 'direhowl', 'relaxaurus', 'mossanda', 'wumpo', 'digtoise', 'beegarde', 'elizabee', 'verdash', 'kitsun', 'katress', 'wixen', 'mammorest', 'broncherry', 'quivern', 'ragnahawk', 'menasting', 'warsect', 'reptyro', 'cryolinx', 'helzephyr', 'incineram', 'tombat', 'pyrin', 'rayhound', 'univolt', 'surfent', 'azurobe', 'elphidran', 'beakon', 'lunaris', 'petallia', 'dinossom', 'penking', 'kingpaca', 'gorirat', 'robinquill', 'fenglope']
+POPULAR = [x for x in dict.fromkeys(POPULAR) if x in idx]
+
 # ---------- output ----------
 if os.path.exists(OUT): shutil.rmtree(OUT)
 os.makedirs(OUT)
@@ -132,6 +167,18 @@ for i, p in enumerate(pals):
             gender_note += (f'<p class="note"><b>Gender matters here:</b> {pals[a]["name"]} ({ga}) + {pals[b]["name"]} ({gb}) → '
                             f'<a href="/pal/{pals[c]["slug"]}/">{pals[c]["name"]}</a>.</p>')
     n_combos = len(combos)
+    steps = route(i)
+    easiest = sorted((pr for pr in combos if pr[0] != pr[1]), key=lambda pr: (max(basenum(pals[pr[0]]), basenum(pals[pr[1]])), basenum(pals[pr[0]]) + basenum(pals[pr[1]])))[:3]
+    easy_html = ('<p><b>Easiest pairs</b> (lowest Paldeck numbers, so usually the earliest Pals to catch): ' + '; '.join(f'{plink(pals[a])} + {plink(pals[b])}' for a, b in easiest) + '.</p>') if easiest else ''
+    if i in STARTERS:
+        route_html = f'<p class="note"><b>Quickest way:</b> {esc(p["name"])} is a common early-game Pal. Catch one in the starting areas rather than breeding it.</p>'
+    elif steps and len(steps) <= 8:
+        route_html = ('<div class="note"><b>Quickest route from early-game Pals</b> (' + str(len(steps)) + (' step' if len(steps) == 1 else ' steps') + '):<ol class="route">'
+                      + ''.join(f'<li>{plink(pals[a])} + {plink(pals[b])} → {plink(pals[c])}</li>' for a, b, c in steps) + '</ol></div>')
+    elif steps:
+        route_html = f'<p class="note"><b>No short route from early-game Pals.</b> Breeding {esc(p["name"])} from scratch takes {len(steps)} steps, so catch one of the parents in the easiest pairs above instead.</p>'
+    else:
+        route_html = ''
     how = (f'<p>{p["name"]} can be bred from <b>{n_combos}</b> parent pair{"s" if n_combos != 1 else ""}.'
            + (' Two ' + p['name'] + ' always breed another ' + p['name'] + '.' if self_pair else '') + '</p>') if n_combos else \
           f'<p>No breeding pair produces {p["name"]} in v1.0 data. It has to be caught or hatched from a wild egg.</p>'
@@ -141,7 +188,7 @@ for i, p in enumerate(pals):
     body = (f'<nav class="crumbs"><a href="/pals/">All Pals</a> › {esc(p["name"])}</nav>'
             f'<header class="palhead">{avatar(p, "xl")}<div><h1>{esc(p["name"])}</h1><p class="muted">Paldeck #{p["num"]} · {els_html(p)}</p></div></header>'
             f'{skill}'
-            f'<section class="card"><h2>How to breed {esc(p["name"])}</h2>{how}{gender_note}'
+            f'<section class="card"><h2>How to breed {esc(p["name"])}</h2>{how}{easy_html}{route_html}{gender_note}'
             + (f'<div class="tablewrap"><table class="combos"><thead><tr><th>Parent</th><th></th><th>Parent</th></tr></thead><tbody>{parent_rows}</tbody></table></div>' if parent_rows else '')
             + '</section>'
             f'<section class="card"><h2>Breed {esc(p["name"])} with any Pal</h2><p class="muted small">Child when {esc(p["name"])} is one parent. Gender does not matter except where noted.</p>'
@@ -150,6 +197,39 @@ for i, p in enumerate(pals):
     urls.append(page(f'/pal/{p["slug"]}/', f'How to breed {p["name"]} in Palworld: all {n_combos} parent combos',
                      f'{p["name"]} (#{p["num"]}, {"/".join(p["els"])}) breeding guide: {n_combos} parent pairs that produce {p["name"]}, its partner skill {p["skill"] or ""}, and what it breeds with every other Pal.',
                      body))
+
+# --- pair pages for popular Pals ---
+pair_count = 0
+for ai, sa in enumerate(POPULAR):
+    for sb in POPULAR[ai:]:
+        a, b = idx[sa], idx[sb]
+        c = child[a][b]
+        if c < 0: continue
+        pa, pb, pc = pals[a], pals[b], pals[c]
+        rules = [g for g in gender_rules if {g[0], g[1]} == {a, b}]
+        if rules:
+            res = ''.join(f'<div class="result-child">{chip(pals[x], "lg")}<span class="muted">({ga})</span><span class="arrow">+</span>{chip(pals[y], "lg")}<span class="muted">({gb})</span><span class="arrow">→</span><span class="big">{chip(pals[z], "lg")}</span></div>' for x, y, z, ga, gb in rules)
+            res += '<p class="note">Gender matters for this pair: the child depends on which parent is female.</p>'
+            title = f'{pa["name"]} + {pb["name"]} breeding result in Palworld'
+            desc = f'Breeding {pa["name"]} with {pb["name"]} gives {" or ".join(pals[z]["name"] for *_, z, _, _ in [(0,0,r[2],0,0) for r in rules])} depending on which parent is female.'
+        else:
+            sp = (min(a, b), max(a, b)) in special
+            res = (f'<div class="result-child">{chip(pa, "lg")}<span class="arrow">+</span>{chip(pb, "lg")}<span class="arrow">→</span><span class="big">{chip(pc, "lg")}</span>'
+                   + ('<span class="badge">special combo</span>' if sp else '') + '</div>')
+            title = f'{pa["name"]} + {pb["name"]} = {pc["name"]} (Palworld breeding)'
+            desc = f'Breeding {pa["name"]} and {pb["name"]} in Palworld v1.0 produces {pc["name"]}. See every other way to breed {pc["name"]} and what else these parents make.'
+        n_c = len(parents_of.get(c, []))
+        body = (f'<nav class="crumbs"><a href="/">Calculator</a> › {esc(pa["name"])} + {esc(pb["name"])}</nav>'
+                f'<h1>{esc(pa["name"])} + {esc(pb["name"])}</h1><section class="card">{res}'
+                f'<p>In Palworld v1.0, a {esc(pa["name"])} and a {esc(pb["name"])} (one male, one female) in a Breeding Farm with a Cake produce a <a href="/pal/{pc["slug"]}/">{esc(pc["name"])}</a> egg. '
+                f'{esc(pc["name"])} can be bred from {n_c} different parent pairs in total.</p>'
+                f'<p><a class="btn" href="/?a={pa["slug"]}&b={pb["slug"]}">Open in the calculator</a></p></section>'
+                f'<div class="grid3"><div class="card"><h3>About {esc(pa["name"])}</h3><p>Paldeck #{pa["num"]} · {els_html(pa)}</p><p>Partner skill: <b>{esc(pa["skill"] or "—")}</b></p><p><a href="/pal/{pa["slug"]}/">All {esc(pa["name"])} breeding combos</a></p></div>'
+                f'<div class="card"><h3>About {esc(pb["name"])}</h3><p>Paldeck #{pb["num"]} · {els_html(pb)}</p><p>Partner skill: <b>{esc(pb["skill"] or "—")}</b></p><p><a href="/pal/{pb["slug"]}/">All {esc(pb["name"])} breeding combos</a></p></div>'
+                f'<div class="card"><h3>About {esc(pc["name"])}</h3><p>Paldeck #{pc["num"]} · {els_html(pc)}</p><p>Partner skill: <b>{esc(pc["skill"] or "—")}</b></p><p><a href="/pal/{pc["slug"]}/">How to breed {esc(pc["name"])}</a></p></div></div>')
+        urls.append(page(f'/breed/{sa}/{sb}/', title, desc, body))
+        pair_count += 1
+print('pair pages', pair_count)
 
 # --- passives ---
 cat_order = ['Pals', 'Mutation', 'World Tree', 'Legendary']
@@ -173,7 +253,8 @@ for name, title, desc in [('about', 'About this Palworld breeding calculator', '
 data = {'pals': [{'s': p['slug'], 'n': p['name'], 'num': p['num'], 'e': p['els']} for p in pals],
         'child': child,
         'special': sorted(list(x) for x in special),
-        'gender': [[a, b, c, ga, gb] for a, b, c, ga, gb in gender_rules]}
+        'gender': [[a, b, c, ga, gb] for a, b, c, ga, gb in gender_rules],
+        'popular': {sl: k + 1 for k, sl in enumerate(POPULAR)}}
 open(os.path.join(OUT, 'data.json'), 'w').write(json.dumps(data, separators=(',', ':')))
 
 # --- sitemap / robots / ads ---

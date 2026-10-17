@@ -89,7 +89,7 @@
         } else if(c>=0){
           var pc=P[c];
           out.innerHTML='<div class="result-child">'+chip(sel.a,'lg')+'<span class="arrow">+</span>'+chip(sel.b,'lg')+'<span class="arrow">→</span><span class="big">'+chip(pc,'lg')+'</span>'+(isSpecial(i,j)?'<span class="badge">special combo</span>':'')+'</div>'
-            +'<p class="small"><a href="/pal/'+pc.s+'/">All ways to breed '+esc(pc.n)+'</a></p>';
+            +'<p class="small"><a href="/pal/'+pc.s+'/">All ways to breed '+esc(pc.n)+'</a>'+(D.popular[sel.a.s]&&D.popular[sel.b.s]?' · <a href="/breed/'+(D.popular[sel.a.s]<=D.popular[sel.b.s]?sel.a.s+'/'+sel.b.s:sel.b.s+'/'+sel.a.s)+'/">Permalink</a>':'')+'</p>';
           document.title=sel.a.n+' + '+sel.b.n+' = '+pc.n+' · Palworld Breeding Calculator';
         } else out.innerHTML='<p class="result-empty">No result for this pair.</p>';
       } else if(sel.a||sel.b){

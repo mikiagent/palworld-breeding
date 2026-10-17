@@ -107,3 +107,5 @@ table.combos td.plus{color:var(--muted);font-weight:700;text-align:center;width:
 @media (max-width:640px){.topnav a{padding:6px 7px;font-size:.92rem}.palhead{gap:12px}.wrap{padding-top:14px}}
 .pl{color:var(--text);font-weight:600;display:inline-flex;align-items:center;gap:7px}
 .pl img{width:28px;height:28px;border-radius:50%;background:var(--bg3);flex:none}
+
+.route{margin:.4em 0 0;padding-left:1.3em}.route li{margin:.2em 0}
