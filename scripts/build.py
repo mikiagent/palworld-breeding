@@ -81,12 +81,11 @@ def page(path, title, desc, body, extra_head='', canonical=None):
     return path
 
 def avatar(p, size='md'):
-    e = p['els'][0].lower(); e2 = p['els'][1].lower() if len(p['els']) > 1 else e
-    ini = ''.join(w[0] for w in p['name'].replace('(', '').split()[:2]).upper()
-    return f'<span class="avatar avatar-{size} el-{e}" data-el2="{e2}" aria-hidden="true">{ini}</span>'
+    e = p['els'][0].lower()
+    return f'<img class="avatar avatar-{size} el-{e}" src="/img/pals/{p["slug"]}.png" alt="" width="128" height="128" loading="lazy" decoding="async">'
 
 def plink(p):
-    return f'<a class="pl el-{p["els"][0].lower()}" href="/pal/{p["slug"]}/">{esc(p["name"])}</a>'
+    return f'<a class="pl" href="/pal/{p["slug"]}/"><img src="/img/pals/{p["slug"]}.png" alt="" width="128" height="128" loading="lazy" decoding="async">{esc(p["name"])}</a>'
 
 def chip(p, size='md'):
     return (f'<a class="palchip" href="/pal/{p["slug"]}/">{avatar(p, size)}<span class="palchip-text"><b>{esc(p["name"])}</b>'
@@ -155,11 +154,13 @@ for i, p in enumerate(pals):
 # --- passives ---
 cat_order = ['Pals', 'Mutation', 'World Tree', 'Legendary']
 prow = ''.join(
-    f'<tr><td><b>{esc(r["passive_name"])}</b></td><td class="rank r{r["rank"].replace("-","m")}">{r["rank"]}</td><td>{esc(r["source_category"])}</td><td>{esc(r["effect"])}</td></tr>'
+    f'<tr class="prow {"neg" if r["rank"].startswith("-") else ("top" if int(r["rank"])>=4 else "pos")}"><td><b class="pname">{esc(r["passive_name"])}</b></td>'
+    f'<td class="rank"><span class="chev chev{abs(int(r["rank"]))}" title="Rank {r["rank"]}"></span><span class="sr-only">Rank {r["rank"]}</span></td>'
+    f'<td>{esc(r["source_category"])}</td><td>{esc(r["effect"])}</td></tr>'
     for r in sorted(passives, key=lambda r: (cat_order.index(r['source_category']) if r['source_category'] in cat_order else 9, -int(r['rank']), r['passive_name'])))
 urls.append(page('/passive-skills/', 'Palworld passive skills list (v1.0): all 115 passives with effects',
                  'Every passive skill in Palworld v1.0 with its rank and effect, including Mutation, World Tree and Legendary passives. Useful when planning what to breed.',
-                 f'<h1>Passive skills</h1><p class="lead">All {len(passives)} passive skills in Palworld v1.0. Rank runs from -3 (worst) to 5 (best). Bred children inherit passives from parents, so these are what you are breeding for.</p>'
+                 f'<h1>Passive skills</h1><p class="lead">All {len(passives)} passive skills in Palworld v1.0. Colours follow the game: yellow chevrons are good (rank 1 to 3), cyan are the rare top-tier passives (rank 4 and 5), red are bad. Bred children inherit passives from parents, so these are what you are breeding for.</p>'
                  f'<div class="toolbar"><input id="passive-filter" type="search" placeholder="Filter passives…" aria-label="Filter passives"></div>'
                  f'<div class="tablewrap"><table class="passives" id="passives"><thead><tr><th>Passive</th><th>Rank</th><th>Category</th><th>Effect</th></tr></thead><tbody>{prow}</tbody></table></div>'))
 

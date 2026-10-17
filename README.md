@@ -30,8 +30,12 @@ Game version check: Palworld 1.0 launched 2026-07-10 with 72 new Pals. Patches 1
 Known gaps and naming notes:
 - Astralym (#204) exists in the Paldeck but has no breeding combinations and no documented partner skill, so it is left out.
 - The CSV and kimpton.io call #163B "Snock Lux"; paldb.cc calls the same Pal "Snock Terra" (Electric/Ground). The site keeps "Snock Lux".
-- Pal artwork is Pocketpair's, so the site uses element-coloured initials instead of game images.
+- Pal icons are the in-game Paldeck icons (Pocketpair assets, used as a fan site; 128px PNGs in `static/img/pals/`).
 
 ## AdSense
 
 Publisher `ca-pub-6122961547647042`. Loader tag in `templates/layout.html`, `site/ads.txt` written by the build, privacy policy at `/privacy/`.
+
+## Ads
+
+Left and right 160×600 rails are in `templates/layout.html`, shown on screens 1400px and wider. They are dashed placeholders until AdSense approves the site: then create two vertical display ad units in AdSense and replace `LEFT_SLOT_ID` and `RIGHT_SLOT_ID` with the numeric slot IDs. The script in `static/app.js` only requests ads once a numeric slot ID is present, and the placeholder box hides when an ad fills.

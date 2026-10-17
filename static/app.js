@@ -33,8 +33,7 @@
   var D=null,P=[],bySlug={};
   var sel={a:null,b:null,c:null,f:null};
   function el(tag,cls,html){var e=document.createElement(tag);if(cls)e.className=cls;if(html!=null)e.innerHTML=html;return e}
-  function avatar(p,size){var e=p.e[0].toLowerCase();var ini=p.n.replace('(','').split(' ').slice(0,2).map(function(w){return w[0]}).join('').toUpperCase();
-    return '<span class="avatar avatar-'+(size||'md')+' el-'+e+'" aria-hidden="true">'+ini+'</span>'}
+  function avatar(p,size){return '<img class="avatar avatar-'+(size||'md')+' el-'+p.e[0].toLowerCase()+'" src="/img/pals/'+p.s+'.png" alt="" width="128" height="128" loading="lazy" decoding="async">'}
   function chip(p,size){return '<a class="palchip" href="/pal/'+p.s+'/">'+avatar(p,size)+'<span class="palchip-text"><b>'+p.n+'</b><small>#'+p.num+'</small></span></a>'}
   function esc(s){return s.replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
 
@@ -123,3 +122,5 @@
     setMode(q.get('child')?'child':'pair',false);update(false);
   });
 })();
+// Ad rails: only request ads once real slot IDs are configured (after AdSense approval).
+(function(){var ins=document.querySelectorAll('.adrail ins.adsbygoogle');ins.forEach(function(el){if(/^\d+$/.test(el.getAttribute('data-ad-slot')||'')){try{(adsbygoogle=window.adsbygoogle||[]).push({})}catch(e){}}})})();
